@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <style>
+    h1{
+      font:bolder 20pt Arial;
+      text-align: center;
+    }
+    id#res{
+      font: bolder 20pt Arial;
+    }
+  </style>
+</head>
+<body>
+  <h1>Calculator</h1>
+  <input type="number"name='txt1' id="txt1">
+  <input type="number"name='txt2' id="txt2">
+  <input type="button" value="Somar" onclick="somar()">
+  <div id="res">Result</div>
+  <script>
+    function somar(){
+
+      var tt1= document.getElementById('txt1')
+      var tt2=document.getElementById('txt2')
+      var res=document.getElementById('res')
+      var a=Number(tt1.value)
+      var b=Number(tt2.value)
+      var s= a+b
+      res.innerHTML=`the sum between ${a} and ${b} is equal to ${s}` 
+  }
+
+  </script>
+</body>
+</html>
